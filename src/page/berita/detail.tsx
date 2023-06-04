@@ -36,6 +36,7 @@ const Detail = (props: any) => {
                 {item.title}
               </h1> */}
               <SunEditor
+                height="h-max"
                 name="renderisi"
                 hideToolbar={true}
                 disable={true}

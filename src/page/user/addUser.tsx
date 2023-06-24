@@ -35,6 +35,7 @@ const AddUser = () => {
       };
       try {
         await UserDataService.addUser(newData);
+        signUp(email, password);
         alert("Berhasil Mendaftar");
         setEmail("");
         setPassword("");
@@ -47,7 +48,6 @@ const AddUser = () => {
         // console.log(err);
       }
       e.target.reset();
-      signUp(email, password);
     }
   };
 

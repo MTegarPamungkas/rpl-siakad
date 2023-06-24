@@ -15,7 +15,7 @@ const useAuth = () => {
 		await createUserWithEmailAndPassword(auth, email, password)
 			.then(res => {
 				// navigate('/');
-				setUser(res.user);
+				// setUser(res.user);
 			})
 			.catch(error => {
 				const result = error as Error;

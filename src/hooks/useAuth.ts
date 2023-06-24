@@ -11,17 +11,18 @@ const useAuth = () => {
 	const navigate = useNavigate();
 
 	const signUp = async (email: string, password: string) => {
-		setLoading(true);
+		// setLoading(true);
 		await createUserWithEmailAndPassword(auth, email, password)
 			.then(res => {
 				// navigate('/');
 				// setUser(res.user);
+				setUser({} as User);
 			})
 			.catch(error => {
 				const result = error as Error;
 				setError(result.message);
 			})
-			.finally(() => setLoading(false));
+			// .finally(() => setLoading(false));
 	};
 
 	const signIn = async (email: string, password: string) => {

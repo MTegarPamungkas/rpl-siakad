@@ -2,7 +2,9 @@ import { useState } from "react";
 import img from "../../assets/img/login.webp";
 import useAuth from "../../hooks/useAuth";
 import UserDataService from "../../service/user";
+import 'firebase/auth';
 const AddUser = () => {
+  
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [invalid, setInvalid] = useState<boolean>(false);

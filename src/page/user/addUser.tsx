@@ -46,6 +46,7 @@ const AddUser = () => {
         setRole("");
       } catch (err) {
         // console.log(err);
+        alert("terjadi kesalahan");
       }
       e.target.reset();
     }

@@ -101,6 +101,7 @@ const AddUser = () => {
           <input
             className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded mt-4"
             type="password"
+            minLength={6}
             onChange={(e) => setPassword(e.target.value)}
             value={password}
             placeholder="Password"

@@ -74,15 +74,15 @@ const Navbar = () => {
                   ))}
 
                   <AuthProvider>
-                    {role != "guru" ? (
-                      ""
-                    ) : (
+                    {role == "guru" ? (
                       <NavLink
-                        to="/informasi/addinformasi"
-                        className="cursor-pointer bg-blue-600 text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-black"
-                      >
-                        Add Information
-                      </NavLink>
+                      to="/informasi/addinformasi"
+                      className="cursor-pointer bg-blue-600 text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-black"
+                    >
+                      Add Information
+                    </NavLink>
+                    ) : (
+                      ""
                     )}
                     {user.email == null ? (
                       <NavLink
